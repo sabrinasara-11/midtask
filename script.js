@@ -42,4 +42,6 @@ document.getElementById("checkBtn").addEventListener("click", (event) => {
         return;
     }
 
+    alert(" form submitted");
+
 });
