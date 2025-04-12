@@ -7,11 +7,17 @@ document.getElementById("checkBtn").addEventListener("click", (event) => {
     const password2 = document.getElementById("password2").value;
 
     // Check for special characters in full name
-    const specialCharPattern = /[^a-zA-Z0-9 ]/;
+    const specialCharPattern = /[^a-zA-Z0-9. ]/;
+
     if (specialCharPattern.test(fullName)) {
+    
         alert("Special character detected in full name!");
+    
         return;
+    
     }
+    
+     
 
     // Email format check: 22-48818-3@student.aiub.edu
     const emailPattern = /^\d{2}-\d{5}-\d@student\.aiub\.edu$/;
