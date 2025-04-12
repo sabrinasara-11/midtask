@@ -5,6 +5,7 @@ document.getElementById("checkBtn").addEventListener("click", (event) => {
     const email = document.getElementById("email").value;
     const password1 = document.getElementById("password1").value;
     const password2 = document.getElementById("password2").value;
+    const zip= document.getElementById("zipCode").value;
 
     // Check for special characters in full name
     const specialCharPattern = /[^a-zA-Z0-9. ]/;
@@ -19,7 +20,6 @@ document.getElementById("checkBtn").addEventListener("click", (event) => {
     
      
 
-    // Email format check: 22-48818-3@student.aiub.edu
     const emailPattern = /^\d{2}-\d{5}-\d@student\.aiub\.edu$/;
     if (!emailPattern.test(email)) {
         alert("Email must be in the format: xx-xxxxx-x@student.aiub.edu");
@@ -37,6 +37,9 @@ document.getElementById("checkBtn").addEventListener("click", (event) => {
         alert("Passwords do not match.");
         return;
     }
-
+    if (zip.length < 4) {
+        alert("zip code must be at least 4 characters long.");
+        return;
+    }
 
 });
