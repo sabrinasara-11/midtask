@@ -42,6 +42,11 @@ document.getElementById("checkBtn").addEventListener("click", (event) => {
         return;
     }
 
+    if (!checkBox.checked) {
+        alert("You must agree to the Terms and Conditions.");
+        return;
+    }
+
     alert(" form submitted");
 
 });
