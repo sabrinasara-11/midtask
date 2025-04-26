@@ -20,7 +20,7 @@
       .container {
         display: flex;
         width: 40%;
-        height: 90vh;
+        height: 100vh;
       }
       .column {
         flex: 1;
@@ -38,6 +38,7 @@
       #box-2 {
         flex: 1;
         background-color: pink;
+        margin: 2px;
       }
       #box-2 {
         background-color: rgb(160, 171, 171);
@@ -45,10 +46,12 @@
       #box-3 {
         flex: 2;
         background-color: rgb(181, 230, 250);
+        margin: 2px;
       }
       #box-4 {
         flex: 1;
         background-color: lavender;
+        margin: 2px;
       }
 
       form {
@@ -63,9 +66,9 @@
       form input,
       form select {
         width: 100%;
-        padding: 6px 8px;
-        margin-top: 4px;
-        font-size: 14px;
+        padding: 4px 6px;
+        margin-top: 2px;
+        font-size: 12px;
         border: 1px solid #ccc;
         border-radius: 4px;
       }
@@ -74,12 +77,12 @@
         margin-right: 5px;
       }
       #checkBtn {
-        margin-top: 12px;
-        padding: 10px;
+        margin-top: 5px;
+        padding:  10px;
         background-color: #4CAF50;
         color: white;
         border: none;
-        font-size: 16px;
+        font-size: 13px;
         border-radius: 4px;
         cursor: pointer;
       }
@@ -130,13 +133,7 @@
             </select>
 
             <label for="colorSelect">Select Form Color:</label>
-            <select id="colorSelect">
-              <option value="lightblue">Light Blue</option>
-              <option value="lightgreen">Light Green</option>
-              <option value="lavender">Lavender</option>
-              <option value="lightyellow">Light Yellow</option>
-              <option value="white">White</option>
-            </select>
+            <input type="color">
 
             <label style="margin-top:10px;">
               <input type="checkbox" id="checkBox">
