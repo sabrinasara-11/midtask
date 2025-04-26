@@ -37,66 +37,114 @@
       #box-1,
       #box-2 {
         flex: 1;
-        background-color:pink;
+        background-color: pink;
       }
       #box-2 {
-        background-color: rgb(255, 215, 162);
+        background-color: rgb(160, 171, 171);
       }
       #box-3 {
         flex: 2;
-        background-color: skyblue;
+        background-color: rgb(181, 230, 250);
       }
       #box-4 {
         flex: 1;
-        background-color:rgb(161, 148, 241);
+        background-color: lavender;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+      }
+      form label {
+        margin-top: 8px;
+        font-size: 16px;
+      }
+      form input,
+      form select {
+        width: 100%;
+        padding: 6px 8px;
+        margin-top: 4px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      form input[type="checkbox"] {
+        width: auto;
+        margin-right: 5px;
+      }
+      #checkBtn {
+        margin-top: 12px;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      #checkBtn:hover {
+        background-color: #45a049;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 5px;
       }
     </style>
   </head>
   <body>
-    <h1 style="text-align: center">Logo</h1>
-    <h1 style="text-align: center">Title</h1>
+    <h1>Logo</h1>
+    <h1>Weather Forecast</h1>
     <div class="container">
       <div class="column">
         <div id="box-1" class="box">Box-1</div>
         <div id="box-2" class="box">Box-2</div>
       </div>
       <div class="column">
-        <div id="box-3"class="box">
+        <div id="box-3" class="box">
           <form action="">
-            <label for="">
-              user name: 
-            </label>
-            <input type="text" name="" id="fullName"><br>
-            <label for="">Email  :</label>
-            <input type="email" id="email"><br>
-            <label>Password:</label>
-            <input type="password" id="password1"> <br>
-            <label>Confirm Password </label>
-            <input type="password" id="password2"><br>
-            <label for="">Location:</label>
-            <input type="text"><br>
-            <label for="">Zip Code:</label>
-            <input type="text" id="zipCode"><br>
-            <label for="">Preferred cities</label>
-            <select name="" id="">
+            <label for="fullName">User Name:</label>
+            <input type="text" id="fullName">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+
+            <label for="password1">Password:</label>
+            <input type="password" id="password1">
+
+            <label for="password2">Confirm Password:</label>
+            <input type="password" id="password2">
+
+            <label for="location">Location:</label>
+            <input type="text" id="location">
+
+            <label for="zipCode">Zip Code:</label>
+            <input type="text" id="zipCode">
+
+            <label for="preferredCities">Preferred Cities:</label>
+            <select id="preferredCities">
               <option value="Dhaka">Dhaka</option>
               <option value="Sylhet">Sylhet</option>
               <option value="Rajshahi">Rajshahi</option>
               <option value="Cumilla">Cumilla</option>
-            </select><br>
+            </select>
+
             <label for="colorSelect">Select Form Color:</label>
             <select id="colorSelect">
-              
-             <option value="lightblue">Light Blue</option>
+              <option value="lightblue">Light Blue</option>
               <option value="lightgreen">Light Green</option>
               <option value="lavender">Lavender</option>
               <option value="lightyellow">Light Yellow</option>
               <option value="white">White</option>
-            </select><br>
-            <input type="checkbox" id="checkBox">
-            <label for="">Terms and Condition</label><br>
-            <button id="checkBtn">Submit</button>
-           </form>
+            </select>
+
+            <label style="margin-top:10px;">
+              <input type="checkbox" id="checkBox">
+              Agree to Terms & Conditions
+            </label>
+
+            <button id="checkBtn" type="submit">Submit</button>
+          </form>
         </div>
         <div id="box-4" class="box">Box-4</div>
       </div>
