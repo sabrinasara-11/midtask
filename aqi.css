@@ -1,0 +1,32 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    border: 1px solid #000;
+  }
+  
+  th {
+    background-color: #f4a9c4;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #fce5eb;
+  }
+  
+  #box-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 2px;
+  }
+  
