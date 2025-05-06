@@ -6,105 +6,25 @@
     <title>AQI</title>
     <link rel="stylesheet" href="aqi.css" />
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        display: flex;
-        flex-direction: column;
-        height: 95vh;
-        justify-content: center;
-        align-items: center;
-      }
-      .container {
-        display: flex;
-        width: 40%;
-        height: 90vh;
-      }
-      .column {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-      }
-      .box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 20px;
-        font-weight: bold;
-      }
-      #box-1 {
-        flex: 3;
-        background-color: pink;
-      }
-      #box-2 {
-        flex: 1;
-        background-color: rgb(160, 171, 171);
-        margin: 2px;
-      }
-      #box-3 {
-        flex: 2;
-        background-color: rgb(181, 230, 250);
-        margin: 2px;
-      }
-      #box-4 {
-        flex: 1;
-        background-color: lavender;
-        margin: 2px;
-      }
-
-      form {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-      }
-      form label {
-        margin-top: 8px;
-        font-size: 16px;
-      }
-      form input,
-      form select {
-        width: 100%;
-        padding: 4px 6px;
-        margin-top: 2px;
-        font-size: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-      form input[type="checkbox"] {
-        width: auto;
-        margin-right: 5px;
-      }
-      #checkBtn {
-        margin-top: 5px;
-        padding: 10px;
-        background-color: #4caf50;
-        color: white;
-        border: none;
-        font-size: 13px;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      #checkBtn:hover {
-        background-color: #45a049;
-      }
-      h1 {
-        text-align: center;
-        margin-top: 5px;
-      }
-      #checkBox {
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
-        margin-left: 8px;
-      }
-      .error-message {
-        color: red;
-        font-size: 12px;
-        margin-top: 2px;
-      }
+      /* CSS unchanged for brevity */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { display: flex; flex-direction: column; height: 95vh; justify-content: center; align-items: center; }
+      .container { display: flex; width: 40%; height: 90vh; }
+      .column { flex: 1; display: flex; flex-direction: column; }
+      .box { display: flex; justify-content: center; align-items: center; font-size: 20px; font-weight: bold; }
+      #box-1 { flex: 3; background-color: pink; }
+      #box-2 { flex: 1; background-color: rgb(160, 171, 171); margin: 2px; }
+      #box-3 { flex: 2; background-color: rgb(181, 230, 250); margin: 2px; }
+      #box-4 { flex: 1; background-color: lavender; margin: 2px; }
+      form { display: flex; flex-direction: column; width: 80%; }
+      form label { margin-top: 8px; font-size: 16px; }
+      form input, form select { width: 100%; padding: 2px 4px; margin-top: 1px; font-size: 12px; border: 1px solid #ccc; border-radius: 4px; }
+      form input[type="checkbox"] { width: auto; margin-right: 5px; }
+      #checkBtn { margin-top: 5px; padding: 10px; background-color: #4caf50; color: white; border: none; font-size: 13px; border-radius: 4px; cursor: pointer; }
+      #checkBtn:hover { background-color: #45a049; }
+      h1 { text-align: center; margin-top: 5px; }
+      #checkBox { width: 16px; height: 16px; vertical-align: middle; margin-left: 8px; }
+      .error-message { color: red; font-size: 12px; margin-top: 2px; }
     </style>
   </head>
   <body>
@@ -115,52 +35,12 @@
         <div id="box-1" class="box">
           <table>
             <thead>
-              <tr>
-                <th>City</th>
-                <th>Weather</th>
-              </tr>
+              <tr><th>City</th><th>Weather</th></tr>
             </thead>
             <tbody>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
+              <tr><td>Dhaka</td><td>Sunny</td></tr>
+              <tr><td>Sylhet</td><td>Cloudy</td></tr>
+              <tr><td>Rajshahi</td><td>Rainy</td></tr>
             </tbody>
           </table>
         </div>
@@ -168,32 +48,36 @@
       </div>
       <div class="column">
         <div id="box-3" class="box">
-          <form action="process.php" method="post" onsubmit="return validateForm();">
+          <form >
             <label for="fullName">User Name:</label>
-            <input type="text" id="fullName" />
+            <input type="text" id="fullName" name="fullName" />
             <div class="error-message" id="nameError"></div>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" />
+            <input type="email" id="email" name="email" />
             <div class="error-message" id="emailError"></div>
 
             <label for="password1">Password:</label>
-            <input type="password" id="password1" />
+            <input type="password" id="password1" name="password1" />
             <div class="error-message" id="password1Error"></div>
 
             <label for="password2">Confirm Password:</label>
-            <input type="password" id="password2" />
+            <input type="password" id="password2" name="password2" />
             <div class="error-message" id="password2Error"></div>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" />
+            <div class="error-message" id="dobError"></div>
 
             <label for="location">Location:</label>
-            <input type="text" id="location" />
+            <input type="text" id="location" name="location" />
 
             <label for="zipCode">Zip Code:</label>
-            <input type="text" id="zipCode" />
+            <input type="text" id="zipCode" name="zipCode" />
             <div class="error-message" id="zipError"></div>
 
             <label for="preferredCities">Preferred Cities:</label>
-            <select id="preferredCities">
+            <select id="preferredCities" name="preferredCities">
               <option value="Dhaka">Dhaka</option>
               <option value="Sylhet">Sylhet</option>
               <option value="Rajshahi">Rajshahi</option>
@@ -201,18 +85,19 @@
             </select>
 
             <label style="margin-top: 10px; font-size: 16px">
-              Agree to Terms & Conditions
-              <input type="checkbox" id="checkBox" />
+              Agree to Terms &  Conditions
+              <input type="checkbox" id="checkBox" name="terms" />
             </label>
             <div class="error-message" id="checkBoxError"></div>
 
-            <input type="submit" name="submit" value="Submit" id="checkBtn"/>
+            <button type="button" id="checkBtn" onclick="validateForm()">Submit</button>
           </form>
         </div>
         <div id="box-4" class="box">Box-4</div>
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+   </script>
   </body>
 </html>

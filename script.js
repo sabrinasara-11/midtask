@@ -1,11 +1,11 @@
 function validateForm() {
-  // Clear individual error messages
   document.getElementById("nameError").textContent = "";
   document.getElementById("emailError").textContent = "";
   document.getElementById("password1Error").textContent = "";
   document.getElementById("password2Error").textContent = "";
   document.getElementById("zipError").textContent = "";
   document.getElementById("checkBoxError").textContent = "";
+  document.getElementById("dobError").textContent = "";
 
   const fullName = document.getElementById("fullName").value.trim();
   const email = document.getElementById("email").value.trim();
@@ -13,6 +13,7 @@ function validateForm() {
   const password2 = document.getElementById("password2").value;
   const zip = document.getElementById("zipCode").value.trim();
   const checkBox = document.getElementById("checkBox");
+  const dob = document.getElementById("dob").value;
 
   let hasError = false;
 
@@ -51,11 +52,30 @@ function validateForm() {
     hasError = true;
   }
 
+  // Age validation
+  if (dob) {
+    const birthDate = new Date(dob);
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+
+    if (age < 18) {
+      document.getElementById("dobError").textContent = "You must be at least 18 years old.";
+      hasError = true;
+    }
+  } else {
+    document.getElementById("dobError").textContent = "Date of Birth is required.";
+    hasError = true;
+  }
+
   // Checkbox validation
   if (!checkBox.checked) {
     document.getElementById("checkBoxError").textContent = "You must agree to the Terms and Conditions.";
     hasError = true;
   }
 
-  return !hasError; // Prevent form submission if any error exists
+  return !hasError;
 }
