@@ -168,7 +168,7 @@
       </div>
       <div class="column">
         <div id="box-3" class="box">
-          <form action="process.php" method="post">
+          <form action="process.php" method="post" onsubmit="return validateForm();">
             <label for="fullName">User Name:</label>
             <input type="text" id="fullName" />
             <div class="error-message" id="nameError"></div>
@@ -206,7 +206,7 @@
             </label>
             <div class="error-message" id="checkBoxError"></div>
 
-            <button id="checkBtn" type="submit">Submit</button>
+            <input type="submit" name="submit" value="Submit" id="checkBtn"/>
           </form>
         </div>
         <div id="box-4" class="box">Box-4</div>
