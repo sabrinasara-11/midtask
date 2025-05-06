@@ -22,6 +22,8 @@
       form input[type="checkbox"] { width: auto; margin-right: 5px; }
       #checkBtn { margin-top: 5px; padding: 10px; background-color: #4caf50; color: white; border: none; font-size: 13px; border-radius: 4px; cursor: pointer; }
       #checkBtn:hover { background-color: #45a049; }
+      #loginBtn { margin-top: 5px; padding: 10px; background-color: #4caf50; color: white; border: none; font-size: 13px; border-radius: 4px; cursor: pointer; }
+      #loginBtn:hover { background-color: #45a049; }
       h1 { text-align: center; margin-top: 5px; }
       #checkBox { width: 16px; height: 16px; vertical-align: middle; margin-left: 8px; }
       .error-message { color: red; font-size: 12px; margin-top: 2px; }
@@ -48,7 +50,7 @@
       </div>
       <div class="column">
         <div id="box-3" class="box">
-          <form >
+          <form action="process.php" method="post"  >
             <label for="fullName">User Name:</label>
             <input type="text" id="fullName" name="fullName" />
             <div class="error-message" id="nameError"></div>
@@ -90,10 +92,21 @@
             </label>
             <div class="error-message" id="checkBoxError"></div>
 
-            <button type="button" id="checkBtn" >Submit</button>
+            <input type="submit" id="checkBtn" value="Submit" />
           </form>
         </div>
-        <div id="box-4" class="box">Box-4</div>
+        <div id="box-4" class="box">
+          <form action="">
+            <label for="Name">Name:</label>
+            <input type="text" id="lname" name="lname" />
+
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="loginPassword" />
+
+            <button type="button" id="loginBtn">Login</button>
+          </form>
+
+        </div>
       </div>
     </div>
 
