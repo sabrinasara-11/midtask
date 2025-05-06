@@ -1,4 +1,4 @@
-function validateForm() {
+document.getElementById("checkBtn").addEventListener("click", (event) => {
   document.getElementById("nameError").textContent = "";
   document.getElementById("emailError").textContent = "";
   document.getElementById("password1Error").textContent = "";
@@ -53,8 +53,12 @@ function validateForm() {
   }
 
   // Age validation
-  if (dob) {
-    const birthDate = new Date(dob);
+if (dob) {
+  const birthDate = new Date(dob);
+  if (isNaN(birthDate.getTime())) {
+    document.getElementById("dobError").textContent = "Invalid Date of Birth.";
+    hasError = true;
+  } else {
     const today = new Date();
     let age = today.getFullYear() - birthDate.getFullYear();
     const m = today.getMonth() - birthDate.getMonth();
@@ -66,10 +70,11 @@ function validateForm() {
       document.getElementById("dobError").textContent = "You must be at least 18 years old.";
       hasError = true;
     }
-  } else {
-    document.getElementById("dobError").textContent = "Date of Birth is required.";
-    hasError = true;
   }
+} else {
+  document.getElementById("dobError").textContent = "Date of Birth is required.";
+  hasError = true;
+}
 
   // Checkbox validation
   if (!checkBox.checked) {
@@ -78,4 +83,5 @@ function validateForm() {
   }
 
   return !hasError;
-}
+
+});
