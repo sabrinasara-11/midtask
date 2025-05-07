@@ -17,7 +17,7 @@ document.getElementById("checkBtn").addEventListener("click", (event) => {
 
   let hasError = false;
 
-  // Full Name validation
+  
   const specialCharPattern = /[^a-zA-Z. ]/;
   const multipleDotPattern = /\..*\./;
   if (specialCharPattern.test(fullName)) {
@@ -28,14 +28,14 @@ document.getElementById("checkBtn").addEventListener("click", (event) => {
     hasError = true;
   }
 
-  // Email validation
+  
   const emailPattern = /^\d{2}-\d{5}-\d@student\.aiub\.edu$/;
   if (!emailPattern.test(email)) {
     document.getElementById("emailError").textContent = "Email must be in the format: xx-xxxxx-x@student.aiub.edu";
     hasError = true;
   }
 
-  // Password validation
+
   if (password1.length < 8) {
     document.getElementById("password1Error").textContent = "Password must be at least 8 characters long.";
     hasError = true;
@@ -46,13 +46,13 @@ document.getElementById("checkBtn").addEventListener("click", (event) => {
     hasError = true;
   }
 
-  // Zip Code validation
+
   if (zip.length < 4) {
     document.getElementById("zipError").textContent = "Zip code must be at least 4 characters long.";
     hasError = true;
   }
 
-  // Age validation
+  
 if (dob) {
   const birthDate = new Date(dob);
   if (isNaN(birthDate.getTime())) {
@@ -76,7 +76,7 @@ if (dob) {
   hasError = true;
 }
 
-  // Checkbox validation
+  
   if (!checkBox.checked) {
     document.getElementById("checkBoxError").textContent = "You must agree to the Terms and Conditions.";
     hasError = true;
