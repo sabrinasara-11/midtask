@@ -31,7 +31,7 @@
   </head>
   <body>
     <img src="weather-109.png" alt="" width="90" />
-    <h1>Weathercaster</h1>
+    <h1>Air Index Quality</h1>
     <div class="container">
       <div class="column">
         <div id="box-1" class="box">
@@ -57,7 +57,7 @@
       </div>
       <div class="column">
         <div id="box-3" class="box">
-          <form action="process.php" method="post"  >
+          <form action="process.php" method="post" onsubmit="return val()" >
             <label for="fullName">User Name:</label>
             <input type="text" id="fullName" name="fullName" />
             <div class="error-message" id="nameError"></div>
