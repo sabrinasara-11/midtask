@@ -103,17 +103,18 @@
           </form>
         </div>
         <div id="box-4" class="box">
-          <form action="">
+          <form action="verification.php" method="post">
             <label for="Name">Name:</label>
-            <input type="text" id="lname" name="lname" />
+            <input type="text" id="lname" name="loginName" required />
 
             <label for="loginPassword">Password:</label>
-            <input type="password" id="loginPassword" name="loginPassword" />
+            <input type="password" id="loginPassword" name="loginPassword" required />
 
-            <button type="button" id="loginBtn">Login</button>
+            <input type="submit" name="login" value="login" id="checkBtn" />
           </form>
 
         </div>
+        
       </div>
     </div>
 
