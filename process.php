@@ -73,10 +73,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <style>
             body {
                 font-family: 'Segoe UI', Arial, sans-serif;
-                background: linear-gradient(120deg, #e6e6fa 0%, #f8f6ff 100%);
+                background: <?php echo isset($_SESSION['color']) && $_SESSION['color'] ? htmlspecialchars($_SESSION['color']) : "#e6e6fa"; ?>;
                 margin: 0;
                 padding: 0;
                 min-height: 100vh;
+                transition: background 0.5s;
             }
             .container {
                 max-width: 600px;

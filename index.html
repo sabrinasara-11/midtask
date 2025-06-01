@@ -93,6 +93,9 @@
               <option value="Cumilla">Cumilla</option>
             </select>
 
+            <label>Select Form Color:</label>
+              <input type="color" name="color" id="color" />
+
             <label style="margin-top: 10px; font-size: 16px">
               Agree to Terms &  Conditions
               <input type="checkbox" id="checkBox" name="terms" />
@@ -118,7 +121,19 @@
       </div>
     </div>
 
-    <script src="script.js">
-   </script>
+    <script src="script.js"></script>
+    <script>
+      // Read the bgcolor cookie and set the background color
+      function getCookie(name) {
+        let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        if (match) return decodeURIComponent(match[2]);
+        return null;
+      }
+      const bgColor = getCookie('bgcolor');
+      if (bgColor) {
+        document.body.style.background = bgColor;
+      }
+    </script>
   </body>
-</html>
+
+</html></html>
